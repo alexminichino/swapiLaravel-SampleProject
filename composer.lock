@@ -4,8 +4,67 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c61ff82cbf0142a401a48a8161e1595a",
+    "content-hash": "cb8abf22cead7a420c8ee34fd41293dc",
     "packages": [
+        {
+            "name": "alexminichino/swapi",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alexminichino/swapiLaravel.git",
+                "reference": "36bd1c9c7c2076fefd0ecb07e6c971bbaa686caf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alexminichino/swapiLaravel/zipball/36bd1c9c7c2076fefd0ecb07e6c971bbaa686caf",
+                "reference": "36bd1c9c7c2076fefd0ecb07e6c971bbaa686caf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0",
+                "phpunit/phpunit": "9.5.x-dev"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AlexMinichino\\Swapi\\Config\\SwapiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AlexMinichino\\Swapi\\Tests\\": "tests",
+                    "AlexMinichino\\Swapi\\": "src",
+                    "Database\\Seeders\\": "database/seeds/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "AlexMinichino\\Swapi\\Tests\\": "tests",
+                    "AlexMinichino\\Swapi\\": "src"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "test-f": [
+                    "vendor/bin/phpunit --filter"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Alex",
+                    "email": "alexminichino@gmail.com"
+                }
+            ],
+            "description": "The swapi package",
+            "time": "2022-08-07T15:45:46+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.1.1",
@@ -7498,7 +7557,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "alexminichino/swapi": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
